@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:sneaker_shop/components/bottom_nav_bar.dart';
+import 'package:sneaker_shop/pages/cart_page.dart';
+import 'package:sneaker_shop/pages/shop_page.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
