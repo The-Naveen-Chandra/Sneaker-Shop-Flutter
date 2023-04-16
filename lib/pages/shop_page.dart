@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:sneaker_shop/components/shoe_tile.dart';
+import 'package:sneaker_shop/models/shoe_data.dart';
 
 class ShopPage extends StatefulWidget {
-  const ShopPage({super.key});
+  ShopPage({super.key});
 
   @override
   State<ShopPage> createState() => _ShopPageState();
@@ -78,8 +79,19 @@ class _ShopPageState extends State<ShopPage> {
         // list of shoes
         Expanded(
           child: ListView.builder(
-            itemBuilder: (context, intdex) {
-              return ShoeTile();
+            itemCount: shoes.length,
+            scrollDirection: Axis.horizontal,
+            itemBuilder: (context, index) {
+              Shoe shoe = Shoe(
+                  name: "Air Jordan 1 Mid SE",
+                  price: 2240,
+                  imgPath: "assets/images/Air_Jordan_1_mid_SE.png",
+                  description:
+                      "Cool Shoes.");
+              // Create a shoe
+              return ShoeTile(
+                shoe: shoe,
+              );
             },
           ),
         ),
