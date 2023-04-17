@@ -21,7 +21,7 @@ class _CartItemState extends State<CartItem> {
       context: context,
       builder: (context) => const AlertDialog(
         title: Text(
-          "Successfully Deleted",
+          "Successfully Deleted.",
           textAlign: TextAlign.center,
         ),
         icon: Icon(
