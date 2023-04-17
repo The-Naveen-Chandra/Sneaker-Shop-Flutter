@@ -16,10 +16,11 @@ class ShoeTile extends StatelessWidget {
       ),
       child: Column(children: [
         // shoe image
-        Image.asset(shoe.imgPath)
+        Image.asset(shoe.imgPath),
 
 
         // description
+        Text(shoe.name),
 
 
         // price + details
