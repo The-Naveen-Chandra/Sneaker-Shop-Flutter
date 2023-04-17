@@ -45,7 +45,7 @@ class _CartItemState extends State<CartItem> {
           widget.shoe.imgPath,
         ),
         title: Text(widget.shoe.name),
-        subtitle: Text(widget.shoe.price.toString()),
+        subtitle: Text("₹${widget.shoe.price}"),
         trailing: IconButton(
           icon: const Icon(
             Icons.delete_outline_rounded,
