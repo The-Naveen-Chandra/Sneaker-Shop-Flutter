@@ -6,7 +6,7 @@ class Cart extends ChangeNotifier{
   List<Shoe> shoeShop = [
     Shoe(
       name: "Air Jordan 1 Mid SE",
-      price: 234,
+      price: 23400,
       description: dummyText,
       imgPath: "assets/images/Air_Jordan_1_mid_SE.png",
     ),
