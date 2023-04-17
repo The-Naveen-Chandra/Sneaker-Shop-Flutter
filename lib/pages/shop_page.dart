@@ -21,8 +21,11 @@ class _ShopPageState extends State<ShopPage> {
     showDialog(
       context: context,
       builder: (context) => const AlertDialog(
-        title: Text("Successfully added"),
-        content: Text("Check your cart"),
+        title: Text("Successfully Added."),
+        icon: Icon(
+          Icons.check_circle_outline_rounded,
+          size: 25,
+        ),
       ),
     );
   }
