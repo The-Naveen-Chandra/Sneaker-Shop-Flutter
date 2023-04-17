@@ -38,7 +38,7 @@ class _ShopPageState extends State<ShopPage> {
 
         // message
         Padding(
-          padding: const EdgeInsets.symmetric(vertical: 25),
+          padding: const EdgeInsets.symmetric(vertical: 20),
           child: Text(
             "Everyone flies... some fly longer than others.",
             style: GoogleFonts.poppins(
@@ -58,7 +58,7 @@ class _ShopPageState extends State<ShopPage> {
                 "Hot Picks 🔥",
                 style: GoogleFonts.roboto(
                   fontWeight: FontWeight.bold,
-                  fontSize: 24.0,
+                  fontSize: 20.0,
                 ),
               ),
               Text(
@@ -79,6 +79,7 @@ class _ShopPageState extends State<ShopPage> {
         // list of shoes
         Expanded(
           child: ListView.builder(
+            physics: const BouncingScrollPhysics(),
             itemCount: shoes.length,
             scrollDirection: Axis.horizontal,
             itemBuilder: (context, index) {
@@ -86,13 +87,24 @@ class _ShopPageState extends State<ShopPage> {
                   name: "Air Jordan 1 Mid SE",
                   price: 2240,
                   imgPath: "assets/images/Air_Jordan_1_mid_SE.png",
-                  description:
-                      "Cool Shoes.");
+                  description: "cool Shoes");
               // Create a shoe
               return ShoeTile(
                 shoe: shoe,
               );
             },
+          ),
+        ),
+
+        const Padding(
+          padding: EdgeInsets.only(
+            left: 20.0,
+            right: 20.0,
+            top: 10.0,
+            bottom: 10,
+          ),
+          child: Divider(
+            color: Colors.white,
           ),
         ),
       ],
